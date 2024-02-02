@@ -1,3 +1,4 @@
+
 def add(x, y):
     return x + y
 
@@ -13,8 +14,20 @@ def divide(x, y):
     else:
         return "Cannot divide by zero"
 
-# Example usage:
-result = add(5, 3)
-print("5 + 3 =", result)
+if __name__ == "__main__":
+    num1 = float(input("Enter first number: "))
+    operator = input("Enter the operator (+, -, *, /): ")
+    num2 = float(input("Enter the second number: "))
 
+    if operator == "+":
+        result = add(num1, num2)
+    elif operator == "-":
+        result = subtract(num1, num2)
+    elif operator == "*":
+        result = multiply(num1, num2)
+    elif operator == "/":
+        result = divide(num1, num2)
+    else:
+        result = "Invalid operator"
 
+    print(f"Hence,Result: {result}")
